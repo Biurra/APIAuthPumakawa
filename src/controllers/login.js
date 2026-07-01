@@ -14,3 +14,7 @@ export async function login(req, res) {
     res.json({ text: 'Login succesful' });
 }
 
+export async function loginAuth(req, res) {
+    //TO DO
+    res.json({ text: 'User authenticated' });
+}
