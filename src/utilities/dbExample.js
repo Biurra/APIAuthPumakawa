@@ -1,0 +1,1 @@
+const users = [{ id: 1, username: 'admin1', password: 'password1', role: 'admin' }];
