@@ -1,9 +1,9 @@
 import app from '../../app.js';
 import jwt from 'jsonwebtoken';
-import keyGen from './keyGen.js';
+import { keyGen } from './keyGen.js';
 
-function jwtPayload(user) {
-    const JWT_SECRET = keyGen();
+export function jwtPayload(user) {
+    const JWT_SECRET = process.env.JWT_SECRET;
 
     const payload = {
         id: user.id,
@@ -12,6 +12,6 @@ function jwtPayload(user) {
     };
 
     const token = jwt.sign(payload, JWT_SECRET, { expiresIn: '1h' });
-}
 
-export default jwtPayload;
+    return token
+}

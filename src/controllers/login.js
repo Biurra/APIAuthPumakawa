@@ -1,8 +1,8 @@
 import app from '../../app.js';
-import * as utils from './utilities/uIndex.js';
-import databaseExample from './utilities/dbExample.js';
+import * as utils from '../utilities/uIndex.js';
+import databaseExample from '../utilities/dbExample.js';
 
-async function login(req, res) {
+export async function login(req, res) {
     const { user, pwd } = req.body;
 
     if (!user) {
@@ -13,3 +13,4 @@ async function login(req, res) {
 
     res.json({ text: 'Login succesful' });
 }
+

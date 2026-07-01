@@ -5,6 +5,6 @@ const app = express();
 app.use(express.json());
 
 app.use('/', router);
-app.use('/auth', authRoute);
+//app.use('/auth', authRoute);
 
 export default app;
