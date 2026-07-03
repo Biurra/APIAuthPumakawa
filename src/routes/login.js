@@ -1,10 +1,10 @@
-import route from './rIndex.js';
+import { Router } from 'express';
 import * as controllers from '../controllers/cIndex.js';
 
 const loginRouter = Router();
 
-loginRouter.post('/login', controllers.login);
-loginRouter.get('/login/auth', controllers.loginAuth);
+loginRouter.get('/login', controllers.loginMenu);
+loginRouter.post('/login', controllers.loginAuth);
 
 export default loginRouter;
 
